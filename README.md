@@ -1,6 +1,18 @@
 # git_operation
 
-github  将fork的项目和原来的项目保持一致
+git使用五部曲
+1. 先拉取代码
+    git pull
+2. 修改内容,并查看修改文件
+    git status
+3. 增加修改
+    git add "文件名"
+4. 提交修改
+    git commit -m "修改说明"
+5. 提交到远程分支
+    git push
+
+github:将fork的项目和原来的项目保持一致
 
 1. 将github上fork别人的项目clone到本地
 
