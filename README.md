@@ -42,3 +42,17 @@ github:将fork的项目和原来的项目保持一致
 
     打开 `https://github.com/my_fork/project.git`  
     点击Pull Request -> 点击New Pull Request -> 输入Title和功能说明 -> 点击Send pull request
+
+如果第6步出现问题：   
+fatal: remote error: 
+  You can't push to git://github.com/lvpchen/project.git
+  Use https://github.com/lvpchen/project.git
+
+原因：
+clone的时候选择http协议导致的。用https://github.com/username/project.git。只有读的权限，不能写入，导致不能push。
+
+解决方法：
+删除远程分支：git remote rm update_stream
+要用ssh协议才能push，所以clone用git@github.com:username/project.git
+
+增加远程分支：git remote add update_stream git@github.com:orignal_username/project.git
